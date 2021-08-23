@@ -10,14 +10,14 @@ import org.apache.kafka.clients.consumer.ConsumerRecords;
 import org.apache.kafka.clients.consumer.KafkaConsumer;
 
 public class Consumer {
-	
+
 	public static void main(String[] args) {
 		
         Properties props = new Properties();
 
         //Update the IP adress of Kafka server here//
 
-        //properties.put("bootstrap.servers", "ec2-18-206-108.compute-1.amazonaws.com:9092");
+        props.put("bootstrap.servers", "34.233.133.249:9092");
 
         props.setProperty("group.id", "sweethome");
         props.setProperty("enable.auto.commit", "true");

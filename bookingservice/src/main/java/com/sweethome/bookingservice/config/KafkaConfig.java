@@ -6,18 +6,17 @@ import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.Producer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-
+import org.springframework.beans.factory.annotation.Value;
 
 @Configuration
 public class KafkaConfig {
-	
-	
+
 	@Bean
 	public  Producer<String, String> setUpKafkaPropoerties() {
 		   Properties properties = new Properties();
 		//Update the IP adress of Kafka server here//
 
-		//properties.put("bootstrap.servers", "ec2-18-206-108.compute-1.amazonaws.com:9092");
+			properties.put("bootstrap.servers", "34.233.133.249:9092");
 	        properties.put("acks", "all");
 	        properties.put("retries", 0);
 	        properties.put("linger.ms", 0);
