@@ -1,0 +1,58 @@
+version: '3'
+
+services:
+  eurekaserver:
+    build: eurekaserver
+    container_name: eurekaserver
+    image: sweet-home/eurekaserver:1.0.0
+    ports:
+      - "8761:8761"
+    networks:
+      - sweet-home-network
+    environment:
+      EUREKA_HOST_NAME: 127.0.0.1
+      EUREKA_PORT: 8761
+
+  paymentservice:
+    build: paymentservice
+    container_name: paymentservice
+    image: sweet-home/paymentservice:1.0.0
+    ports:
+      - "8083:8083"
+    networks:
+      - sweet-home-network
+    environment:
+      EUREKA_HOST_NAME: eurekaserver
+      EUREKA_PORT: 8761
+      PAYMENT_SVC_PORT: 8083
+    depends_on:
+      - eurekaserver
+
+  bookingservice:
+    build: bookingservice
+    container_name: bookingservice
+    image: sweet-home/bookingservice:1.0.0
+    ports:
+      - "8080:8080"
+    networks:
+      - sweet-home-network
+    environment:
+      EUREKA_HOST_NAME: eurekaserver
+      EUREKA_PORT: 8761
+      BOOKING_SVC_PORT: 8080
+    depends_on:
+      - eurekaserver
+      - notificationservice
+
+  notificationservice:
+    build: notificationservice
+    container_name: notificationservice
+    image: sweet-home/notificationservice:1.0.0
+    networks:
+      - sweet-home-network
+    depends_on:
+      - eurekaserver
+
+networks:
+  sweet-home-network:
+    driver: bridge
