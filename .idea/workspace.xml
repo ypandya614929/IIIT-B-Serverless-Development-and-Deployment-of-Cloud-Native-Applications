@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="15361a95-04dc-4abe-bd9b-309c0eb5ca0a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/bookingservice/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/bookingservice/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookingservice/src/main/java/com/sweethome/bookingservice/config/KafkaConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/bookingservice/src/main/java/com/sweethome/bookingservice/config/KafkaConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookingservice/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/bookingservice/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eurekaserver/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/eurekaserver/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notificationservice/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/notificationservice/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/paymentservice/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/paymentservice/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notificationservice/src/main/java/com/sweethome/notificationservice/Consumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/notificationservice/src/main/java/com/sweethome/notificationservice/Consumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/paymentservice/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/paymentservice/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
