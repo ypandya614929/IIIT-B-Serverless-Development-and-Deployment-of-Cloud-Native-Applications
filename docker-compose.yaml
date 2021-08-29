@@ -10,7 +10,7 @@ services:
     networks:
       - sweet-home-network
     environment:
-      EUREKA_HOST_NAME: 127.0.0.1
+      EUREKA_HOST_NAME: 52.1.204.116
       EUREKA_PORT: 8761
 
   paymentservice:
