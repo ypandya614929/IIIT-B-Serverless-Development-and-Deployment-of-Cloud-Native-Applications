@@ -2,7 +2,6 @@
 FROM maven:3.8.2-jdk-11 as build
 MAINTAINER ypandya614929
 WORKDIR /opt/app
-
 COPY src /opt/app/src
 COPY pom.xml /opt/app
 RUN mvn -f /opt/app/pom.xml clean package
@@ -11,9 +10,6 @@ RUN mvn -f /opt/app/pom.xml clean package
 FROM openjdk:14-jdk-alpine
 MAINTAINER ypandya614929
 WORKDIR /opt/app
-
 COPY --from=build /opt/app/target/bookingService.jar /opt/app/bookingService.jar
-
 EXPOSE 8080
-
-CMD [ "java", "-jar", "/opt/app/bookingService.jar"]
+ENTRYPOINT [ "java", "-jar", "/opt/app/bookingService.jar"]

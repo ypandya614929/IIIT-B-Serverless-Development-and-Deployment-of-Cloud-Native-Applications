@@ -3,7 +3,7 @@ version: '3'
 services:
   eurekaserver:
     build: eurekaserver
-    container_name: eurekaserver
+    container_name: eureka-server
     image: sweet-home/eurekaserver:1.0.0
     ports:
       - "8761:8761"
@@ -15,7 +15,7 @@ services:
 
   paymentservice:
     build: paymentservice
-    container_name: paymentservice
+    container_name: payment-service
     image: sweet-home/paymentservice:1.0.0
     ports:
       - "8083:8083"
@@ -30,7 +30,7 @@ services:
 
   bookingservice:
     build: bookingservice
-    container_name: bookingservice
+    container_name: booking-service
     image: sweet-home/bookingservice:1.0.0
     ports:
       - "8080:8080"
@@ -46,12 +46,11 @@ services:
 
   notificationservice:
     build: notificationservice
-    container_name: notificationservice
+    container_name: notification-service
     image: sweet-home/notificationservice:1.0.0
     networks:
       - sweet-home-network
-    depends_on:
-      - eurekaserver
+
 
 networks:
   sweet-home-network:
